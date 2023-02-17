@@ -11,7 +11,7 @@ function Product(props) {
         
           <h5 className="card-title">{product.title}</h5>
           {showButton && (
-            <Link className="pot margButton" to={`/product/${product.id} `}>
+            <Link className=" margButton buttonInCard" to={`/product/${product.id} `}>
               Details
             </Link>
           )}

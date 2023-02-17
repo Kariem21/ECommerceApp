@@ -13,7 +13,7 @@ function ProductList() {
     fetch(api_url)
       .then((res) => res.json())
       .then((data) => setProducts(data));
-      console.log(products);
+      // console.log(products);
   };
   const getCategories = () => {
     fetch(`${api_url}/categories`)
@@ -21,37 +21,57 @@ function ProductList() {
       .then((data) => setCategories(data));
   };
   const getProductInCategory = (catName) => {
-    console.log(catName);
+    // console.log(catName);
     fetch(`${api_url}/category/${catName}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   };
+  const [count,setCount] = useState(1);
 
   useEffect(() => {
     getProducts();
     getCategories();
   }, []);
+  
+  var buttons = document.getElementsByClassName("myButton");
+
+  // Add a click event listener to each button
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+      // Remove the "active" class from all buttons
+      for (var j = 0; j < buttons.length; j++) {
+        buttons[j].classList.remove("active");
+      }
+      // Add the "active" class to the clicked button
+      this.classList.add("active");
+    });
+  }
+
   return (
     <>
       <h1 className="text-center p-3">Our Products</h1>
       <div className="container">
-        <div className="divButtons">
+        <div className="divButtons" >
         <button
-        className="pot"
-          //className="btn btn-info"
+        className="pot  myButton  "
           onClick={() => {
             getProducts();
-          }}
+          }
+        
+        }
+          
         >
           All
-        </button>
-        {categories.map((cat) => {
+        </button>     
+        {categories.map((cat,i) => {
           return (
             <button
-              className="pot styledButton"
+
+              className="pot styledButton  myButton "
               key={cat}
               onClick={() => {
                 getProductInCategory(cat);
+                
               }}
             >
               {cat}
@@ -59,9 +79,8 @@ function ProductList() {
           );
         })}
         </div>
-        
-
-        <div className="row">
+        {(products.length > 0)?(
+          <div className="row">
           {products.map((product) => {
             return (
               <div className="col-3" key={product.id}>
@@ -71,6 +90,9 @@ function ProductList() {
             );
           })}
         </div>
+        ): (<h1>Not Found</h1>)}
+
+        
       </div>
     </>
   );

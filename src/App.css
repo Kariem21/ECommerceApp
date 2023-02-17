@@ -39,8 +39,16 @@
 .styledButton{
   margin-left: 5px;
 }
-
-.pot{ background-color: #4CAF50; /* Green background color */
+.focused:focus{
+  background-color: #282c34;
+  color: white;
+}
+button.active {
+  background-color: #282c34;
+  color: white;
+}
+.pot{ 
+  /* background-color: #4CAF50;  */
   border: none; /* Remove button border */
   color: white; /* Text color */
   padding: 10px 20px; /* Add padding */
@@ -51,10 +59,10 @@
   border-radius: 5px; /* Add rounded corners */
   box-shadow: 2px 2px 2px #888;}
 
-  .pot:hover{
+  /* .pot:hover{
     background-color: #3e8e41;
     color: white;
-  }
+  } */
   .DivButtons{
     display: flex;
   flex-direction: row;
@@ -62,3 +70,15 @@
   align-items: center;
   flex-wrap: wrap;
   }  
+  .buttonInCard{
+    border: none;
+    color: white;
+    background-color: #282c34;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #888;
+  }
