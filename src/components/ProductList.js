@@ -3,7 +3,6 @@ import "../App.css"
 import "../productList.css";
 import { useEffect } from "react";
 import { useState } from "react";
-import "../App.css";
 function ProductList() {
   const api_url = "https://fakestoreapi.com/products";
   const [categories, setCategories] = useState([]);
@@ -80,10 +79,10 @@ function ProductList() {
         })}
         </div>
         {(products.length > 0)?(
-          <div className="row">
+          <div className="row1">
           {products.map((product) => {
             return (
-              <div className="col-3" key={product.id}>
+              <div className="colo" key={product.id}>
                 <Product product={product} showButton={true} />
 
               </div>

@@ -1,3 +1,14 @@
 .col-3 {
   margin-top: 40px;
 }
+
+.row1{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+margin-top: 50px;
+}
+.colo{
+  width: 25%;
+}

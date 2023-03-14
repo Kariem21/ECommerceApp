@@ -1,6 +1,17 @@
-@media screen and (max-width: 480px) {
-    .photo{
-  
-    }
-  }
-  
+
+
+ .textcont{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;}
+
+ .h5title{    font-size: 18px;
+  font-weight: 700;}
+.h5des{
+  width: 50%;
+}
+.imgdetail{
+  width: 300px;
+  height: 300px;
+}

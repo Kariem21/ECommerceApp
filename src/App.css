@@ -1,3 +1,63 @@
+.imglanding{
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+}
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu {
+    margin-top: 10px;
+  }
+  .menu li {
+    margin: 5px 0;
+  }
+}
+
 .App {
   text-align: center;
 }
@@ -50,14 +110,15 @@ button.active {
 .pot{ 
   /* background-color: #4CAF50;  */
   border: none; /* Remove button border */
-  color: white; /* Text color */
+  color: black; /* Text color */
   padding: 10px 20px; /* Add padding */
   text-align: center; /* Center the text */
   text-decoration: none; /* Remove underline from the text */
   display: inline-block; /* Make it an inline element */
   font-size: 16px; /* Set the font size */
   border-radius: 5px; /* Add rounded corners */
-  box-shadow: 2px 2px 2px #888;}
+  box-shadow: 2px 2px 2px #888;
+cursor: pointer;}
 
   /* .pot:hover{
     background-color: #3e8e41;
@@ -81,4 +142,10 @@ button.active {
     font-size: 16px;
     border-radius: 5px;
     box-shadow: 2px 2px 2px #888;
+
+  }
+
+  .buttonInCard:hover{
+    box-shadow: 7px 5px 56px -14px #C3D900;
+
   }

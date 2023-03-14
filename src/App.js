@@ -1,6 +1,5 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Slider from "./components/Slider";
 import ProductList from "./components/ProductList";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
@@ -13,17 +12,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-         
-          <Route
-            path="/"
-            element={
-              <>
-                <Slider />
-                <ProductList />
-                
-              </>
-            }
-          />
+          <Route path="/" element={<ProductList />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="product/:productId" element={<ProductDetails />} />
