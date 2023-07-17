@@ -72,7 +72,13 @@ nav {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-evenly;
+  margin: 50px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -19,7 +19,7 @@ function ProductDetails() {
   });
   return (
     <>
-      <div className="">
+      <div className="ContainerProductDetails">
         <img src={product.image} className="imgdetail" alt={product.title} />
         <div className="textcont">
           <h5 className="h5title">{product.title}</h5>
